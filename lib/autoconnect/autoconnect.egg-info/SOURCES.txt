@@ -1,0 +1,5 @@
+setup.py
+lib/autoconnect/autoconnect.egg-info/PKG-INFO
+lib/autoconnect/autoconnect.egg-info/SOURCES.txt
+lib/autoconnect/autoconnect.egg-info/dependency_links.txt
+lib/autoconnect/autoconnect.egg-info/top_level.txt

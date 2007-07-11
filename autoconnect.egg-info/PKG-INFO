@@ -1,0 +1,22 @@
+Metadata-Version: 1.0
+Name: autoconnect
+Version: 0.9.0
+Summary: This module helps in automatic client-server socket connection setup for networked applications.
+Home-page: UNKNOWN
+Author: Oisin Mulvihill
+Author-email: oisin dot mulvihill at gmail com
+License: LGPL
+Description: This module helps in automatic client-server socket connection setup for networked applications.
+        
+        I wrote this module a while ago (5+ years) and though it would be handy
+        for others. Its a handy auto-socket connection module. I used it
+        originally in a internet cafe management system. The client app installed
+        on the PC would start the receiver. It would then wait for the server
+        to broadcast its URL and on receiving it connect and do its business.
+        
+        I've recently had call to want to do this type of thing again so I thought
+        I'd dust this code off and make into a proper project. I'll release the
+        code I've got first the improve it as I start using again.
+        
+        
+Platform: UNKNOWN

@@ -1,0 +1,15 @@
+setup.py
+lib/autoconnect/__init__.py
+lib/autoconnect/broadcaster.py
+lib/autoconnect/receiver.py
+lib/autoconnect/util.py
+lib/autoconnect.egg-info/PKG-INFO
+lib/autoconnect.egg-info/SOURCES.txt
+lib/autoconnect.egg-info/dependency_links.txt
+lib/autoconnect.egg-info/top_level.txt
+lib/autoconnect/doc/__init__.py
+lib/autoconnect/example/__init__.py
+lib/autoconnect/example/test_client.py
+lib/autoconnect/example/test_server.py
+lib/autoconnect/tests/__init__.py
+lib/autoconnect/tests/testautoconnect.py
