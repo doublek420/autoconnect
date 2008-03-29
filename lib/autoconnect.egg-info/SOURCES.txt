@@ -1,4 +1,9 @@
+runtests.py
 setup.py
+autoconnect.egg-info/PKG-INFO
+autoconnect.egg-info/SOURCES.txt
+autoconnect.egg-info/dependency_links.txt
+autoconnect.egg-info/top_level.txt
 lib/autoconnect/__init__.py
 lib/autoconnect/broadcaster.py
 lib/autoconnect/receiver.py
@@ -7,7 +12,12 @@ lib/autoconnect.egg-info/PKG-INFO
 lib/autoconnect.egg-info/SOURCES.txt
 lib/autoconnect.egg-info/dependency_links.txt
 lib/autoconnect.egg-info/top_level.txt
+lib/autoconnect/autoconnect.egg-info/PKG-INFO
+lib/autoconnect/autoconnect.egg-info/SOURCES.txt
+lib/autoconnect/autoconnect.egg-info/dependency_links.txt
+lib/autoconnect/autoconnect.egg-info/top_level.txt
 lib/autoconnect/doc/__init__.py
+lib/autoconnect/doc/autoconnect.txt
 lib/autoconnect/example/__init__.py
 lib/autoconnect/example/test_client.py
 lib/autoconnect/example/test_server.py

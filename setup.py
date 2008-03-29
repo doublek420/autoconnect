@@ -8,7 +8,7 @@ Project setuptools config...
 from setuptools import setup, find_packages
 
 Name='autoconnect'
-ProjecUrl="http://www.sourceweaver.com/autoconnect"
+ProjecUrl="" #"http://www.sourceweaver.com/autoconnect"
 Version='0.9.1'
 Author='Oisin Mulvihill'
 AuthorEmail='oisin dot mulvihill at gmail com'
@@ -27,6 +27,11 @@ to broadcast its URL and on receiving it connect and do its business.
 I've recently had call to want to do this type of thing again so I thought
 I'd dust this code off and make into a proper project. I'll release the 
 code I've got first then improve it as I start using again.
+
+The developer access to the code is available on:
+
+    http://code.google.com/p/autoconnect/
+
 
 """
 
