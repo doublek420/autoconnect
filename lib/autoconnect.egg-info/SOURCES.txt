@@ -1,3 +1,4 @@
+Makefile
 runtests.py
 setup.py
 autoconnect.egg-info/PKG-INFO

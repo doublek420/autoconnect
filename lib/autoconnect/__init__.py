@@ -48,7 +48,9 @@ import receiver
 import broadcaster
 
 from receiver import watch
+from receiver import UdpReceiver
 from broadcaster import beacon
+from broadcaster import UdpBroadcaster
 from util import is_free
 from util import random_ports
 from util import FreePortError

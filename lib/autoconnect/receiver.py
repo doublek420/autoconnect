@@ -79,7 +79,7 @@ class WatchError(Exception):
 
 
 def watch(port_range=util.AUTOCONNECT_RANGE, timeout=60, retries=20):
-    """Watch for the server beckon, which will tell use the URI we're to connect to.
+    """Watch for the server beacon, which will tell use the URI we're to connect to.
 
     port_range:
         This is a random list of ports that are common
@@ -91,9 +91,11 @@ def watch(port_range=util.AUTOCONNECT_RANGE, timeout=60, retries=20):
         data on the selected random port.
         
     retries:
-        The amount of times we watch for beckon broadcasts
+        The amount of times we watch for beacon broadcasts
         before we give up waiting.
-    
+
+        If this is 0 then the watch will wait indefinetly for
+        a server broadcast.
         
     returned:
         The string containing a URI from the server. For
@@ -105,9 +107,13 @@ def watch(port_range=util.AUTOCONNECT_RANGE, timeout=60, retries=20):
         
     """
     uri = None
+    current_retries = retries
     
-    # Find a free port we'll watch for a beckon on: 
-    retries = 20
+    # Find a free port we'll watch for a beacon on:
+    if current_retries == 0:
+        # I need to give up on this if I can't get a free port.
+        retries = 20
+        
     while True:
         port = random.choice(port_range)
         if util.is_free(port):
@@ -118,9 +124,16 @@ def watch(port_range=util.AUTOCONNECT_RANGE, timeout=60, retries=20):
                 raise WatchError("I was unable to find a free port in %s!" % port_range)
         time.sleep(0.1)
 
-    # Loop watching for the server beckon:
-    retries = 20
+    # Loop watching for the server beacon:
+    if current_retries:
+        retries = current_retries
+    else:
+        # loop forever in the following loop as we don't
+        # decrement retries when current_retries is 0
+        retries = 1
+    
     r = UdpReceiver()
+            
     while retries:
         try:
             #print "watching on port %d..." % port
@@ -129,10 +142,12 @@ def watch(port_range=util.AUTOCONNECT_RANGE, timeout=60, retries=20):
             
         except socket.error, e:
             uri = None
-            retries -= 1
+            if current_retries:
+                # on decrement when currnt retries is not zero
+                retries -= 1
             
     if not uri:
-        raise WatchError("I was unable to see a server beckon!")
+        raise WatchError("I was unable to see a server beacon!")
     
     return uri
         
