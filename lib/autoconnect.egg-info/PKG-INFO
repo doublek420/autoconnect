@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: autoconnect
-Version: 0.9.1
+Version: 0.9.2
 Summary: This module helps in automatic client-server discovery and connection setup for networked applications.
 Home-page: UNKNOWN
 Author: Oisin Mulvihill

@@ -29,7 +29,7 @@ import autoconnect
 def main():
     """Watch for server beckons the connect and use the XML-RPC Server.
     """
-    print "Watching for the server beckon."
+    print "Watching for the server beacon."
     uri = autoconnect.watch()
 
     print "Got the server URI '%s'. Connecting... " % uri

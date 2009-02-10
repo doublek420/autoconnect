@@ -52,8 +52,8 @@ class Server:
         self.server.register_instance(Person())
 
         # Start the beckon to tell clients the servers XML-RPC URI:
-        print "Homing beckon running. Press Ctrl-C to exit."
-        self.broadcaster = autoconnect.beckon("http://localhost:8000")        
+        print "Homing beacon running. Press Ctrl-C to exit."
+        self.broadcaster = autoconnect.beacon("http://localhost:8000")        
         try:
             self.server.serve_forever()
         except KeyboardInterrupt,e:

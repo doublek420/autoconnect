@@ -112,7 +112,7 @@ class UdpBroadcaster:
             pass
 
 
-def beckon(uri, port_range=util.AUTOCONNECT_RANGE):
+def beacon(uri, port_range=util.AUTOCONNECT_RANGE):
     """Send out the server's URL
 
     uri:
@@ -133,3 +133,5 @@ def beckon(uri, port_range=util.AUTOCONNECT_RANGE):
     return broadcaster
 
 
+# Kept for backwards compatiblity:
+beckon = beacon

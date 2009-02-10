@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 
 Name='autoconnect'
 ProjecUrl="" #"http://www.sourceweaver.com/autoconnect"
-Version='0.9.1'
+Version='0.9.2'
 Author='Oisin Mulvihill'
 AuthorEmail='oisin dot mulvihill at gmail com'
 Maintainer=' Oisin Mulvihill'
